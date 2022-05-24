@@ -9,12 +9,20 @@ use Symfony\Component\Routing\Annotation\Route;
 class HistoireController extends AbstractController
 {
     /**
-     * @Route("/histoire", name="app_histoire")
+     * @Route("/", name="home")
      */
     public function index(): Response
     {
         return $this->render('histoire/index.html.twig', [
             'controller_name' => 'HistoireController',
         ]);
+    }
+
+    /**
+     * @Route("/histoire/MoyenAge", name="MoyenAge")
+     */
+    public function home()
+    {
+        return $this->render('home.html.twig');
     }
 }
