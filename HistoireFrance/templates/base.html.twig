@@ -14,8 +14,7 @@
         {% endblock %}
     </head>
     <body class="body">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
+        <nav class=" navbar navbar-expand-lg navbar-dark bg-primary">
                 <a class="navbar-brand" href="{{ path('home') }}">Accueil</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,47 +34,52 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </li>
                     </ul>
                 </div>
-            </div>
         </nav>
-        <div class="caintainer">
-            {% block body %}{% endblock %}
-        </div>
-            {% block javascripts %}
-
-            {{ encore_entry_script_tags('app') }}
-            
-            {% endblock %}
-        <footer class="footer navbar-expand-lg navbar-dark bg-primary">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarColor01">
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                            </ul>
+        {% block body %}
+        <div class="example-wrapper col-12">
+            <div class="row">
+                <div class="container col-xl-8 col-sm-12">
+                    <div class="container">
+                        
                     </div>
+                        {% block javascripts %}
+
+                        {{ encore_entry_script_tags('app') }}
+                        
+                        {% endblock %}
                 </div>
-        </footer>
+            </div>
+        </div>
+        {% endblock %}
+  <footer class="text-lg-start text-white bg-primary">
+    <div class="container p-4 pb-0">
+      <section>
+        <div class="row">
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Mentions Légales</a>
+              </li>
+              <li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Plan du site</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <hr class="mb-4" />
+      <section class="mb-4">
+        <a class="btn btn-outline-light btn-floating " href="#!" role="button"><i class="fab fa-linkedin-in"></i>linkedin</a>
+        <a class="btn btn-outline-light btn-floating github" href="#!" role="button"><i class="fab fa-github"></i> Github </a>
+      </section>
+    </div>
+  </footer>
     </body>
 </html>
