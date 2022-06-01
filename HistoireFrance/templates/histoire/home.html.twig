@@ -1,1 +1,10 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>{{ MoyenAge.title }}</h1>
+        <p>{{ MoyenAge.content | raw }} </p>
+        <img src="{{ MoyenAge.image }}">
+
+
+{% endblock %}
